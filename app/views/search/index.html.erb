@@ -9,11 +9,11 @@
   </tr>
   <%@poems.each do |poem|%>
     <tr class='Poem'>
-      <td id="Poem-<%=#{poem.title}%>"><%= poem.title %></td>
+      <td> <%= poem.title %> </td>
       <td><%= poem.author %></td>
       <td><%= poem.lines %></td>
-      <td><%= poem.tone.keys %></td>
-      <td><%= poem.tone.values %></td>
+      <td><%= poem.tone.keys.join(', ') %></td>
+      <td><%= poem.tone.values.join(', ') %></td>
     </tr>
   <%end%>
 </table>
