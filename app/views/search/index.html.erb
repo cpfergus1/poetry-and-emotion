@@ -1,0 +1,19 @@
+<h1> Search Results </h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Poem</th>
+    <th>Tone</th>
+    <th>Tone Score</th>
+  </tr>
+  <%@poems.each do |poem|%>
+    <tr class='Poem'>
+      <td id="Poem-<%=#{poem.title}%>"><%= poem.title %></td>
+      <td><%= poem.author %></td>
+      <td><%= poem.lines %></td>
+      <td><%= poem.tone.keys %></td>
+      <td><%= poem.tone.values %></td>
+    </tr>
+  <%end%>
+</table>
